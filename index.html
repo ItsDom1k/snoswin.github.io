@@ -1,0 +1,190 @@
+<!-- Created a website - @SnosWindows -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnosWindows</title>
+  <!-- index.html -->
+<script src="hwid.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #7e57c2, #c2185b);
+      background-size: 200% 200%;
+      animation: gradient 10s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #7e57c2;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #7e57c2;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>SnosWindows</h1>
+    <input type="text" id="key" placeholder="Введи ключ" required>
+    <button onclick="checkKey()">Войти</button>
+  </div>
+
+  <script>
+  var allowedHWID = "your_allowed_hwid_value";
+
+  function checkHWID() {
+    var userHWID = getHWID();
+    if (userHWID === allowedHWID) {
+      // Разрешить доступ к странице скачивания файла
+      // Добавьте логику для создания и загрузки файла
+    } else {
+      alert("Вам не разрешен доступ к этой странице.");
+      window.location.href = "index.html"; // Переход на главную страницу
+    }
+  }
+
+  // Вызов функции checkHWID при загрузке страницы
+  window.onload = checkHWID;
+    var correctKey = "SnosWindows2024";
+
+    function checkKey() {
+      var userKey = document.getElementById('key').value;
+      if (userKey === correctKey) {
+        // Переход на страницу для скачивания файла
+        window.location.href = "download.html";
+      } else {
+        alert("Такого ключа несуществует.\n Взять ключ - @snoswindows");
+      }
+    }
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Скачать файл</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #7e57c2, #c2185b);
+      background-size: 200% 200%;
+      animation: gradient 10s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .download-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #7e57c2;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background-color: #7e57c2;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+  </style>
+</head>
+<body>

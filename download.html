@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Установка файла для сноса Windows</title>
+  <!-- index.html -->
+<script src="hwid.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #7e57c2, #c2185b);
+      background-size: 200% 200%;
+      animation: gradient 10s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .download-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 500px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h3 {
+      color: #7e57c2;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #7e57c2;
+      color: white;
+      padding: 12px 24px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+
+    .telegram-button {
+      width: 50px;
+      height: 50px;
+      background-image: url('telegram.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+
+  <div class="download-container">
+    <h3>Установить файл для сноса Windows</h3>
+    <button onclick="downloadFile()">Установить файл</button>
+    <h3>Инструкция для сноса Windows</h3>
+    <a href="https://t.me/snoswindows" target="_blank">
+      <div class="telegram-button"></div>
+    </a>
+  </div>
+
+  <script>
+    function downloadFile() {
+      // Логика для создания и загрузки файла
+      var content = "Это содержимое файла, который можно скачать.";
+      var blob = new Blob([content], {type: "text/plain;charset=utf-8"});
+      var downloadLink = document.createElement("a");
+      downloadLink.setAttribute("href", URL.createObjectURL(blob));
+      downloadLink.setAttribute("download", "snoswindows2024.json");
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    }
+  </script>
+</body>
+</html>
